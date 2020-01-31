@@ -1,0 +1,33 @@
+﻿@model PetGrooming.Models.Pet
+
+
+@{
+    ViewBag.Title = "Show";
+}
+
+<!--
+<div>Name : @Model.PetName</div>
+<div>Weight : @Model.Weight</div>
+<div>Species : @Model.Species.Name</div>
+<div><a href="/Pet/Delete/@Model.PetID">Delete</a></div>
+-->
+<div class="container-sign-up">
+    <div class="heading-back">
+        <a href="/Pet/List"><span class="glyphicon glyphicon-chevron-left"></span></a>
+        <span>Pet</span>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Species Name : <strong> @Model.PetName</strong>
+            <a href="/Pet/Delete/@Model.PetID"><span class="glyphicon glyphicon-trash"></span></a>
+
+        </div>
+        <div class="panel-body">
+            <div>Name : @Model.PetName</div>
+            <div>Weight : @Model.Weight</div>
+            <div>Species : @Model.Species.Name</div>
+        </div>
+    </div>
+
+</div>

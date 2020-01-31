@@ -1,0 +1,63 @@
+﻿/*/@import url('https://fonts.googleapis.com/css?family=Baskervville&display=swap');*/
+body {
+    margin: 0 auto;
+    background: #f7f3f3;
+    /*font-family: 'Baskervville', serif;*/
+}
+.container-sign-up {
+    
+    margin: 0 auto;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+    margin-bottom: 15px;
+}
+.panel {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top:60px;
+}
+.panel-heading a{
+    float:right;
+}
+.panel-heading a span{
+    font-size:19px;
+}
+.heading-back{
+    font-size:20px;
+}
+.heading-back {
+    margin: 25px 0 0 170px;
+}
+.add-btn {
+    background-color: #ddd;
+    padding: 10px 7px 10px 7px;
+    border-radius: 8px;
+}
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+.view-right{
+    float:right;
+    
+    font-size:20px;
+}
+    .view-right:hover {
+        text-decoration: none;
+    }
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
