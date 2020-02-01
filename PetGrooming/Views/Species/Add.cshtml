@@ -4,10 +4,14 @@
 }
 
 <h2>Add a New Species</h2>
-<a href="/Species/List">Back to Species</a>
-<form method="POST" action="/Species/Add">
-    <div><span>Name:</span><input id="Name" type="text" name="Name" /></div>
-    <div><span>Breed:</span><input id="Breed" type="text" name="Breed" /></div>
-  
-    <input type="submit" value="Add Species">
-</form>
+<a href="/Species/List"><span class="glyphicon glyphicon-chevron-left"></span>Back to Species</a>
+<div class="container-sign-up">
+    <form method="POST" action="/Species/Add">
+        <div class="row">
+            <div><span>Name:</span><input id="Name" class="form-control" type="text" name="Name" required/></div><br/>
+            <div><span>Breed:</span><input id="Breed" class="form-control" type="text" name="Breed" required/></div>
+            <br/>
+            <input type="submit" class="btn btn-info" value="Add Species">
+        </div>
+    </form>
+</div>

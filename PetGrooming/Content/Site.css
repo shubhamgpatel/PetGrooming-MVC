@@ -24,8 +24,16 @@ body {
     padding-right: 15px;
     padding-top:60px;
 }
-.panel-heading a{
-    float:right;
+.heading p{
+    font-size:22px;
+}
+.panel-heading a {
+    float: right;
+}
+.row {
+    width: 30%;
+    margin: 0 auto;
+    padding: 2em 0 2em 0;
 }
 .panel-heading a span{
     font-size:19px;

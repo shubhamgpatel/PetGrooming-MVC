@@ -3,30 +3,55 @@
     ViewBag.Title = "Add";
 }
 
-<h2>Add a New Pet</h2>
-<a href="/Pet/List">Back to Pets</a>
-<form method="POST" action="/Pet/Add">
-    <!-- TODO: format this nicely -->
-    <div><span>Name:</span><input id="PetName" type="text" name="PetName" /></div>
-    <div>
-        <span>Species:</span>
-        <select id="SpeciesID" type="text" name="SpeciesID">
-            @{ 
-                //A rendering loop for presenting a list of species
-                //The pet should be one of these species
-                foreach(var species in Model)
-                {
-                    <option value="@species.SpeciesID">@species.Name</option>
 
-                }
-            }
-        </select>
-    </div>
-    <div><span>Weight:</span><input id="PetWeight" type="text" name="PetWeight" />KG</div>
-    <div><span>Color:</span><input id="PetColor" type="text" name="PetColor" /></div>
-    <div>Notes:</div>
-    <textarea id="PetNotes" name="PetNotes">
+<span class="heading">
+    <p>
+        <a href="/Pet/List"><span class="glyphicon glyphicon-chevron-left"></span></a>
+        Add a New Pet
+    </p>
 
-    </textarea>
-    <input type="submit" value="Add Pet">
-</form>
+</span>
+<div class="container-sign-up">
+
+    <form method="POST" action="/Pet/Add">
+        <!-- TODO: format this nicely -->
+        <div class="add-form">
+            <div class="row">
+                <div class="form-group">
+                    <label for="PetName">Name</label>
+                    <input type="text" class="form-control" id="PetName" name="PetName" required>
+                </div>
+
+                <div>
+                    <span>Species:</span>
+                    <select id="SpeciesID" class="form-control" type="text" name="SpeciesID" required>
+                        @{
+                            //A rendering loop for presenting a list of species
+                            //The pet should be one of these species
+                            foreach (var species in Model)
+                            {
+                                <option value="@species.SpeciesID">@species.Name</option>
+
+                            }
+                        }
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="PetWeight">Weight(in Kgs)</label>
+                    <input type="text" class="form-control" id="PetWeight" name="PetWeight" required>
+                </div>
+                <div class="form-group">
+                    <label for="PetWeight">Color</label>
+                    <input type="text" class="form-control" id="PetColor" name="PetColor" required>
+                </div>
+                <div class="form-group">
+                    <label for="PetWeight">Notes :</label>
+                    <textarea id="PetNotes" class="form-control" name="PetNotes"></textarea>
+                </div>
+
+                <input type="submit" class="btn btn-info" value="Add Pet">
+            </div>
+        </div>
+    </form>
+</div>
+

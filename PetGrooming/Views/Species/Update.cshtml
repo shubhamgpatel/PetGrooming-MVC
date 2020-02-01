@@ -3,12 +3,22 @@
     ViewBag.Title = "Update";
 }
 
-<h2>Update</h2>
-<form action="/Species/Update/@Model.SpeciesID" method="POST">
-    <span>Species Name</span><input type="text" value="@Model.Name" id="Name" name="Name" /><br />
-    <span>Species Breed</span><input type="text" value="@Model.Breed" id="Breed" name="Breed" /><br />
-    
+<span class="heading">
+    <p>
+        <a href="/Species/List"><span class="glyphicon glyphicon-chevron-left"></span></a>
+        Update
+    </p>
 
-    <input type="submit" value="update pet" />
-</form>
+</span>
+<div class="container-sign-up">
+    <div class="row">
+        <form action="/Species/Update/@Model.SpeciesID" method="POST">
+            <span>Species Name</span><input type="text" class="form-control"  required value="@Model.Name" id="Name" name="Name" /><br />
+            <span>Species Breed</span><input type="text" class="form-control" required value="@Model.Breed" id="Breed" name="Breed" /><br />
+
+
+            <input type="submit" class="btn btn-info" value="update pet" />
+        </form>
+    </div>
+</div>
 
